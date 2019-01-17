@@ -1,27 +1,21 @@
-# Herosapp
+#HerosApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+An Angular 7 App for the heros of the world
 
-## Development server
+![alt tag](https://lh5.ggpht.com/umMmDaJiPEztPjTc6S0N8ESZqpl_vNFn8qgfYU2XY-9NAEGllK8n5fd4rNasS4W5zg.jpg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+#Instructions To View
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Make sure you have these installed
 
-## Build
+        node.js
+        git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) > 
+    
+    git clone https://github.com/roecamp0101/meetUpApp
+    
+    Open folder herosapp > npm install > npm start
+    
+    Run > index.html on local server to view app (IE. Adobe Brackets or Sublime Text)
