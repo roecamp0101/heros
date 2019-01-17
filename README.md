@@ -1,8 +1,6 @@
-#HerosApp
+# Heros App (Angular 7)
 
 An Angular 7 App for the heros of the world
-
-HEROS UNITE!!!
 
 ![alt tag](https://i1.wp.com/comics-x-aminer.com/wp-content/uploads/2011/10/MarvelComicsApp.jpg)
 
