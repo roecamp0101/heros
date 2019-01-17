@@ -1,0 +1,33 @@
+<h4 class="text-center pt-5 header-text">Heros detail</h4>
+
+<div class="container">
+<div class="row">
+<div class="col-md-9 mx-auto"  *ngFor="let hero of herosInfo | filter : query | slice: 0:1" highlight>
+<div class="card my-5 shadow" >
+  <div class="card-header">
+  <img src="https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/sm/{{user.id}}.jpg" alt="header-icon" class="rounded-circle align-middle" width="40" height="40">
+  <div class="heroinfo d-inline-block mx-2 text-left align-top">
+      <h5 class="mb-0 text-capitalize">{{user.id | filterurl }}</h5>
+  </div>
+ </div>
+  <div class="card-body">
+    <img src="https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/{{user.id}}.jpg" class="card-img-top" alt="...">
+  </div>
+
+</div>
+
+</div>
+
+
+
+</div>
+<div class="row">
+  <div class="col-md-3 mx-auto">
+    <button class="btn btn-light text-uppercase text-center text-dark btn-shadow mx-auto mb-4 d-block">snapshot</button>
+
+    <button class="btn btn-light text-uppercase text-center text-dark btn-shadow mx-auto mb-4 d-block" (click)="gobackhome()">go back</button>
+
+    <button class="btn btn-light text-uppercase text-center text-dark btn-shadow mx-auto mb-4 d-block" (click)="addfragment()">anchor the hero</button>
+  </div>
+</div>
+</div>

@@ -1,0 +1,111 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+        <h4 class="text-center pt-5 header-text text-uppercase">Heros most liked</h4>
+        <div class="col-md-6 mx-auto"  *ngFor="let hero of herosInfo">
+        <a [routerLink]="['/heros', hero.slug]" class="text-decoration-none text-dark">
+        <div class="most-liked-container my-5">
+          <div class="heros-list-header">
+          <img src="{{hero.images.sm}}" alt="header-icon" class="rounded-circle align-middle" width="55" height="55">
+          <div class="heroinfo d-inline-block mx-2 text-left align-middle">
+              <h5 class="mb-0">{{hero.name}}</h5>
+              <p class="text-muted">{{hero.biography.fullName}}</p>
+          </div>
+          <div class="affliation text-center">
+            <span class="text-capitalize">Affliation: {{hero.biography.alignment}} {{hero.appearance.gender}}</span>
+            &nbsp;<span class="oi oi-heart" [ngClass]="{
+          'text-success':hero.biography.alignment === 'good',
+          'text-danger':hero.biography.alignment === 'bad'
+          }"></span>
+          </div>
+         </div>
+        </div>
+        </a>
+        </div>
+
+        <div class="col-12 col-md-12 mx-auto" *ngFor="let user of userInfo">
+          <div class="most-liked-container my-5">
+            <div class="heros-list-header">
+            <img src="./assets/userAvatar.png" alt="header-icon" class="rounded-circle align-middle" width="55" height="55">
+            <div class="heroinfo d-inline-block mx-2 text-left align-middle">
+                <h5 class="mb-0">{{info.hname}}</h5>
+                <p class="text-muted">{{info.rname}}</p>
+            </div>
+            <div class="affliation text-center">
+              <span class="text-capitalize">Affliation: {{info.affli}} {{info.gender}}</span>
+              &nbsp;<span class="oi oi-heart" [ngClass]="{
+            'text-success':info.affli === 'good',
+            'text-danger':info.affli === 'bad'
+            }"></span>
+            &nbsp; <span class="oi oi-trash" (click)="onItemDeleted()"></span>
+            </div>
+           </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="col-lg-6 mb-5 mx-auto">
+<h4 class="text-center pt-5 header-text text-uppercase">create a hero</h4>
+<form class="pt-5" (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <div class="form-row">
+    <div class="col-md-9">
+    <input type="text" class="form-control pl-0 border-top-0 border-left-0 border-right-0" id="createheroInput" aria-describedby="createheroHelp" placeholder="Name (Your Hero Name?)"
+    ngModel
+    required
+    name="heroname"
+    #heroname="ngModel"
+    [(ngModel)]="heronames">
+    <small id="createheroHelp" class="form-text text-danger" *ngIf="!heroname.valid && heroname.touched">please enter a hero name</small>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-row">
+    <div class="col-md-9">
+    <input type="text" class="form-control pl-0 border-top-0 border-left-0 border-right-0" id="realnameInput" placeholder="Real name"
+    ngModel
+    required
+    name="realname"
+    #realname="ngModel"
+    [(ngModel)]="realnames">
+    <small id="createheroHelp" class="form-text text-danger" *ngIf="!realname.valid && realname.touched">please enter hero's real name</small>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-row">
+    <div class="col-md-9">
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
+  ngModel
+  name="alignment"
+  required>
+     <option selected disabled>Choose Alignment</option>
+     <option value="good">Good</option>
+     <option value="bad">Bad</option>
+   </select>
+   </div>
+   </div>
+   </div>
+
+   <div class="form-check form-check-inline" *ngFor="let gender of genders">
+     <label class="form-check-label" for="inlineRadio2">
+     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"
+           ngModel
+           name="gender"
+           required
+           [value]="gender"
+           >
+           {{gender}}
+   </label>
+ </div>
+
+  <button type="submit" class="btn text-white creatbutton w-50 text-capitalize ml-5 mt-4 d-block"
+  [disabled]="!f.valid" (click)="addHeros()">create</button>
+</form>
+    </div>
+  </div>
+</div>

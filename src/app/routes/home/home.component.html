@@ -1,0 +1,54 @@
+
+<h4 class="text-center pt-5 header-text">Heros most liked</h4>
+
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-6"  *ngFor="let hero of herosInfo | filter: areaSearch" highlight>
+<a [routerLink]="['/heros', hero.slug]" class="text-decoration-none text-dark">
+<div class="card my-5 shadow grow">
+  <div class="card-header">
+  <img src="{{hero.images.sm}}" alt="header-icon" class="rounded-circle align-middle" width="40" height="40">
+  <div class="heroinfo d-inline-block mx-2 text-left align-middle">
+      <h5 class="mb-0">{{hero.name}}</h5>
+      <p class="text-muted">{{hero.biography.fullName}}</p>
+  </div>
+
+  <div class="affliation text-center">
+    <span class="text-capitalize">Affliation: {{hero.biography.alignment}} {{hero.appearance.gender}}</span>
+    &nbsp;<span class="oi oi-heart" [ngClass]="{
+  'text-success':hero.biography.alignment === 'good',
+  'text-danger':hero.biography.alignment === 'bad'
+  }"></span>
+  </div>
+ </div>
+  <div class="card-body">
+    <img src="{{hero.images.lg}}" class="card-img-top" alt="...">
+  </div>
+  <div class="card-footer">
+    <h5 class="card-title">Biography</h5>
+    <ul class="list-unstyled text-capitalize">
+      <li><strong>Full Name</strong>: {{hero.biography.fullName}}</li>
+      <li><strong>Birth Place</strong>: {{hero.biography.placeOfBirth}}</li>
+      <li><strong>Race </strong>: {{hero.appearance.race}}</li>
+      <li><strong>Powers</strong>:
+        <ul>
+          <li>Strength {{hero.powerstats.strength}}</li>
+          <li>Intelligence {{hero.powerstats.intelligence}}</li>
+          <li>Speed {{hero.powerstats.strength}}</li>
+          <li>Durability {{hero.powerstats.strength}}</li>
+          <li>Power {{hero.powerstats.power}}</li>
+          <li>Combat {{hero.powerstats.combat}}</li>
+        </ul>
+      </li>
+      <li><strong>Team Affliations</strong>: {{hero.connections.groupAffiliation}}</li>
+    </ul>
+  </div>
+
+</div>
+</a>
+</div>
+
+</div>
+</div>

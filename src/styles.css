@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  padding: 60px 0 0;
+}
+
+.purple-link{
+  color: #3f51b5 !important;
+  font-size: 14px;
+}
+
+.bg-purple, .navinupt{
+  background-color: #3f51b5 !important;
+}
+
+.navbar{
+  border-bottom: 4px solid #d1c4e9;
+}
+.navbar-brand {
+  height: 50px;
+  width: 70px;
+}
+
+.navbar-brand img{
+  position: relative;
+  bottom: 16px;
+}
+
+.dropdown-toggle::after{
+  content: none;
+}
+
+.navinupt{
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  position: relative;
+  bottom: 7px;
+}
+
+.navinupt::placeholder{
+  color: white;
+}
+
+.navlocation{
+  left: -185px;
+  overflow: auto;
+  max-height: 500px;
+}
+
+.header-text{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.heroinfo, .affliation  {
+  position: relative;
+  top: 6px;
+}
+
+footer{
+  position: relative;
+}
+
+.footer_logo{
+  width: 26%;
+}
+
+.footer_padding{
+  padding-top: 44px;
+}
+
+.footer_img{
+  padding-top: 7px;
+}
+
+.footer_content{
+  position: relative;
+  top: 74px;
+}
+
+.btn-shadow{
+box-shadow:  0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+font-size: 14px;
+}
+
+.creatbutton, .creatbutton:disabled{
+  background-color: #3f51b5;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+select.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+
+
+@media (max-width: 992px) {
+
+.navbar-brand {margin: 0 auto;}
+.navbar-brand img{left: 26px;}
+
+.purplelink {
+  margin-right: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+.navlocation {
+left: 0;
+overflow: auto;
+}
+
+}
+
+
+@media (max-width: 576px) {
+.footer_padding{text-align: center;}
+}
