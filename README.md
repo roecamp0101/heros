@@ -14,7 +14,7 @@ An Angular 7 App for the heros of the world
 
     Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) > 
     
-    git clone https://github.com/roecamp0101/meetUpApp
+    git clone https://github.com/roecamp0101/heros.git
     
     Open folder herosapp > npm install > npm start
     
