@@ -5,7 +5,7 @@
 <div class="container">
 <div class="row">
 
-<div class="col-md-6"  *ngFor="let hero of herosInfo | filter: areaSearch" highlight>
+<div class="col-md-6"  *ngFor="let hero of herosInfo | filter: areaSearch">
 <a [routerLink]="['/heros', hero.slug]" class="text-decoration-none text-dark">
 <div class="card my-5 shadow grow">
   <div class="card-header">
